@@ -13,4 +13,3 @@ for i in range(18):
             urllib.request.urlretrieve('http://www.bhagavad-gita.org/AudioArchive/Gita/English/verses/'+str(i+1).zfill(2)+'-'+str(j).zfill(2)+'.mp3',filename='.Bhagavadgeeta/'+str(i+1).zfill(2)+'-'+str(j).zfill(2)+'.mp3')
         except:
             exception.append(str(i)+str(j))
-print(exception)
