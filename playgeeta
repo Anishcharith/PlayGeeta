@@ -1,0 +1,36 @@
+#!/usr/bin/env python3 
+
+import os
+import sys
+import random
+from os.path import expanduser
+home = expanduser("~")  
+
+basedir=home+'/.Bhagavadgeeta/'
+os.chdir(basedir)
+verses=[39,71,43,42,27,42,30,28,34,40,52,16,29,24,19,19,24,74]
+argv=sys.argv
+
+def helpme():
+    print("-h\t\t\t: Help menu")
+    print("-a\t\t\t: Play all the verses ") 
+    print("-r\t\t\t: Play a random verse ")
+    print("-c\t\t\t: Play a particular chapter")
+def playall():
+    os.system("mplayer *")
+
+def randomverse():
+    verse=random.choice(os.listdir(os.getcwd()))
+    os.system("mplayer "+verse)
+
+def chapter(c):
+    os.system("mplayer "+str(c).zfill(2)+"*")
+
+if argv[1] == '-h':
+    helpme()
+if argv[1] == '-a':
+    playall()
+if argv[1] == '-r':
+    randomverse()
+if argv[1] == '-c':
+    chapter(int(argv[2].zfill(2)))

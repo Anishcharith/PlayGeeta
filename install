@@ -1,0 +1,10 @@
+#!/bin/bash
+echo " Downloading verses, about 25 MB"
+python3 getgeeta.py
+echo "Setting up the player "
+sudo apt-get install mplayer
+cp playgeeta /bin/playgeeta
+chmod 754 /bin/playgeeta
+echo " done !!"
+echo " use playgeeta -h for help"
+
