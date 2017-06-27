@@ -12,11 +12,12 @@ verses=[39,71,43,42,27,42,30,28,34,40,52,16,29,24,19,19,24,74]
 argv=sys.argv
 
 def helpme():
-    print("-h\t\t\t: Help menu")
-    print("-a\t\t\t: Play all the verses ") 
-    print("-r\t\t\t: Play a random verse ")
-    print("-c\t\t\t: Play a particular chapter")
+    print("-h\t\t: Help menu")
+    print("-a\t\t: Play all the verses ") 
+    print("-r\t\t: Play a random verse ")
+    print("-c\t\t: Play a particular chapter")
     print("  Press q to exit while playing any verse")
+    print("  While playing a chapter or all verses press 'ENTER' to skip to next verse")
 def playall():
     os.system("mplayer *")
 
