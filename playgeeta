@@ -16,6 +16,7 @@ def helpme():
     print("-a\t\t\t: Play all the verses ") 
     print("-r\t\t\t: Play a random verse ")
     print("-c\t\t\t: Play a particular chapter")
+    print("  Press q to exit while playing any verse")
 def playall():
     os.system("mplayer *")
 
