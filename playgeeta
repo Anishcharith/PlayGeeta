@@ -26,11 +26,14 @@ def randomverse():
 def chapter(c):
     os.system("mplayer "+str(c).zfill(2)+"*")
 
-if argv[1] == '-h':
-    helpme()
-if argv[1] == '-a':
-    playall()
-if argv[1] == '-r':
+try:
+    if argv[1] == '-h':
+        helpme()
+    if argv[1] == '-a':
+        playall()
+    if argv[1] == '-r':
+        randomverse()
+    if argv[1] == '-c':
+        chapter(int(argv[2].zfill(2)))
+except:
     randomverse()
-if argv[1] == '-c':
-    chapter(int(argv[2].zfill(2)))
