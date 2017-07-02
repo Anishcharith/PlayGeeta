@@ -1,10 +1,10 @@
 #!/bin/bash
-echo " Downloading verses, about 25 MB"
-python3 getgeeta.py
+echo " Setting up audio verses, about 25 MB"
+sudo unzip -d ~/.Bhagavadgeeta/ geeta
 echo "Setting up the player "
 sudo apt-get install mplayer
+chmod +x /bin/playgeeta
 cp playgeeta /bin/playgeeta
-chmod 754 /bin/playgeeta
 echo " done !!"
 echo " use playgeeta -h for help"
 
